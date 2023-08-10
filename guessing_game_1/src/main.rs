@@ -11,9 +11,7 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     //cada crate (caja) tiene doc con instrucciones para usarla
-
     println!("The secret number is: {secret_number}");
-
     println!("Please input your guess.");
 
     //::new es función asociada a String. Retorna un nuevo String vacío
