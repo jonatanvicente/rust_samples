@@ -1,6 +1,5 @@
 use std::io;
-use std::cmp::Ordering; //The Ordering type is another enum and has the variants Less, Greater, and Equal.
-// These are the three outcomes that are possible when you compare two values.
+use std::cmp::Ordering;
 use rand::Rng;
 
 
@@ -9,32 +8,33 @@ fn main() {
     println!("Guess the number!");
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    println!("The secret number is: {secret_number}");
-    println!("Please input your guess.");
+    //println!("The secret number is: {secret_number}");
 
-    //OJO variable reutilizada más adelante (es mut)
-    let mut guess = String::new();
+    loop { //bucle infinito
+        println!("Please input your guess.");
 
-    io::stdin()
-        .read_line(&mut guess)//pasamos como parámetro la variable mut creada arriba para que vuelque valor introducido por user
-        //& indica que el valor es una referencia. Nos permitirá acceder a esa pieza de datos sin necesidad de copiarla en memoria varias veces
-        //referencias son inmutables por default
-        //readline añade \n al final de la entrada. trim() más abajo elimina el \n
-        .expect("Failed to read line");
+        let mut guess = String::new();
 
-    //shadowing: reutilización de la variable creada anteriormente
-    //vinculamos la variable anterior
-    //guess.trim hace referencia a la variable original
-    //parse() convierte el string en un tipo numérico. Necesario tipar guess (u32)
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
 
-    println!("You guessed: {guess}");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num)=> num,
+            Err(_) => continue,// '_' es valor comodín
+        };//Result es un enum con variantes Ok y Err. Si es Ok, parse() retorna un número. Si es Err, retorna un error.
+        //Usamos match expression para manejar el error. Si es Ok, retornamos el número. Si es Err, continuamos el bucle
 
-    //en la comparación, Rust infiere que ambas variables son u32
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
+        println!("You guessed: {guess}");
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
     }
 
 }
