@@ -1,5 +1,5 @@
 [package]
-name = "ownership_mutable_references"
+name = "slices_parameters"
 version = "0.1.0"
 edition = "2021"
 
