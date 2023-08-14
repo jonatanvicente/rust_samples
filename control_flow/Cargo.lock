@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "functions_with_return"
+name = "control_flow"
 version = "0.1.0"
