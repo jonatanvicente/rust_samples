@@ -2,6 +2,7 @@ struct User {
     active: bool,
     username: String,
     email: String,
+    //email: &str, //error. Se pueden almacenar referencias, pero necesitamos lifetimes
     sign_in_count: u64,
 }
 
