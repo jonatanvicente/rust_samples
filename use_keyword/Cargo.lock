@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "restaurant_2"
+name = "use_keyword"
 version = "0.1.0"
