@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "vectors"
+name = "vectors_enum"
 version = "0.1.0"

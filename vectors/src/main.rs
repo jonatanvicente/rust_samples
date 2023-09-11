@@ -28,5 +28,20 @@ fn main() {
         None => println!("There is no third element."),
     }
 
+/*
+     Las borrow checker rules siguen aplicando, dependiendo de si es mut o no.
+ */
+
+    let v = vec![100, 32, 57]; //vector inmutable
+    for i in &v {
+        println!("{i}");
+    }
+
+    let mut v = vec![100, 32, 57]; //mut
+    for i in &mut v {
+        *i += 50;
+        println!("{i}");
+    }
+
 
 }

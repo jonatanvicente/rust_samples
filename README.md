@@ -40,6 +40,11 @@
 	- match
 	- Instrucciones en caso de match
 	- match: Result Ok y Err
+* **hash_maps**. 
+* **hash_maps_scopes**. 
+	- Utilización de variables fuera de ámbito 
+	- Inserción si key no existe
+	- Borrado / sustitución de elementos
 * **if_let**. Uso y comparaciones con Enums
 * **match_control_flow**
 	- Uso de None y Some (null no existe)
@@ -110,6 +115,13 @@
 * **statements_expressions**
 	- No retornan values
 	- Uso de sentencias / funciones
+* **strings**
+	- Creación, append y diversas funciones de Strings
+	- Enunciados de ejercicios en https://doc.rust-lang.org/book/ch08-03-hash-maps.html#summary
+* **strings_iterating**. 
+	- Iteración sobre elementos de un String
+	- Ejemplo de que Unicode scalar values pueden almacenarse en más de 1 byte cada char (see https://doc.rust-lang.org/book/ch08-02-strings.html#bytes-and-scalar-values-and-grapheme-clusters-oh-my)
+* **strings_slicing**. Segmentación de un String
 * **struct_dgb_macro_print**
 	- Uso de debug. Retorno del owner de values
 * **struct_full_example**. Ejemplo de un programa que calcula el área de un rectángulo
@@ -128,5 +140,6 @@
 	- Módulos e invocación de funciones de módulos
 * **variables**. Tipos de variables
 * **vectors**. Declaración y uso de vectores
+* **vectors_enum**. Uso de enums para construir vectores con elementos de distinto tipo
 
 

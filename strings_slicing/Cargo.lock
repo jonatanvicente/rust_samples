@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "vectors"
+name = "strings_slicing"
 version = "0.1.0"
