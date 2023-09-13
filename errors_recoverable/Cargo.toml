@@ -1,8 +1,5 @@
-[profile.release]
-panic = 'abort' # Abort on panic in release mode
-
 [package]
-name = "errors_unrecoverable"
+name = "errors_recoverable"
 version = "0.1.0"
 edition = "2021"
 

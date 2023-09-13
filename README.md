@@ -23,6 +23,13 @@
 	- Loop over collections
 	- Reverse loop
 * **enums**
+* **errors_recoverable**
+	- Uso de Result <T, E> para obtención de mensajes de error
+	- Uso de método unwrap_or_else para evitar match anidados	
+* **errors_unrecoverable**
+	- Invocación de macro panic!
+	- Asignación de env var RUST_BACKTRACE=full para mostrado de traza completa
+	- Closures
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**

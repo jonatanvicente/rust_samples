@@ -1,3 +1,5 @@
+//Añadida env variable para mostrado de backtrace completa de error RUST_BACKTRACE=full
+
 fn main() {
-    println!("Hello, world!");
+    panic!("crash and burn");
 }
