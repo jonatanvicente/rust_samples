@@ -138,6 +138,7 @@
 * **struct_full_example_tuples**. Uso de tuplas
 * **struct_init**. Uso de structs
 * **struct_tuple**. Structs con y sin campos
+* **<span style="color:red">traits</span>**. Trait con importación de crates.
 * **typle_type**
 	- Uso de diferentes tipos en tuplas
 	- Desestructuración de tuplas
