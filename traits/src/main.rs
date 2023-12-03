@@ -10,5 +10,7 @@ fn main() {
         retweet: false,
     };
 
-    println!("1 new tweet: {}", tweet.summarize());
+    println!("1 new tweet: {}", tweet.summarize()); //muestra resumen de data existente, pertenece a aggregator
+
 }
+

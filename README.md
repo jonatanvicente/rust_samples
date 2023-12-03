@@ -139,6 +139,7 @@
 * **struct_init**. Uso de structs
 * **struct_tuple**. Structs con y sin campos
 * **<span style="color:red">traits</span>**. Trait con importación de crates.
+* **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
 * **typle_type**
 	- Uso de diferentes tipos en tuplas
 	- Desestructuración de tuplas
