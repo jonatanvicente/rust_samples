@@ -1,6 +1,7 @@
 
+<img align="right" width="100" height="100" src="rust-logo-blk.svg">
 
-# Ejemplos RUST
+# Samples RUST     
 
 * **array_type**.
 	- Uso de arrays
@@ -53,6 +54,8 @@
 	- Inserción si key no existe
 	- Borrado / sustitución de elementos
 * **if_let**. Uso y comparaciones con Enums
+* **lifetimes**. Ámbito de variables
+* **<span style="color:red">lifetimes_functions</span>**. Ámbito de variables en su utilización con funciones y referencias
 * **match_control_flow**
 	- Uso de None y Some (null no existe)
 	- match
