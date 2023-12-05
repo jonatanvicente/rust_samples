@@ -60,6 +60,9 @@
 * **<span style="color:red">lifetimes_elision</span>**. 
 	- Análisis de lifetimes en funciones
     - Análisis de reglas del compilador para asignación de lifetimes
+* **<span style="color:red">lifetimes_static</span>**.
+    - Uso de lifetime 'static
+	- Análisis de lifetimes en genéricos y traits unidos
 * **match_control_flow**
 	- Uso de None y Some (null no existe)
 	- match
@@ -145,6 +148,7 @@
 * **struct_full_example_tuples**. Uso de tuplas
 * **struct_init**. Uso de structs
 * **struct_tuple**. Structs con y sin campos
+* **test**. Uso general de tests
 * **<span style="color:red">traits</span>**. Trait con importación de crates.
 * **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
 * **typle_type**
