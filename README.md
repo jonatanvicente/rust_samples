@@ -56,6 +56,10 @@
 * **if_let**. Uso y comparaciones con Enums
 * **lifetimes**. Ámbito de variables
 * **<span style="color:red">lifetimes_functions</span>**. Ámbito de variables en su utilización con funciones y referencias
+* **<span style="color:red">lifetimes_structs</span>**. Ámbito de variables en structs
+* **<span style="color:red">lifetimes_elision</span>**. 
+	- Análisis de lifetimes en funciones
+    - Análisis de reglas del compilador para asignación de lifetimes
 * **match_control_flow**
 	- Uso de None y Some (null no existe)
 	- match

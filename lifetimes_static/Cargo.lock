@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "lifetimes_functions"
+name = "lifetimes_static"
 version = "0.1.0"
