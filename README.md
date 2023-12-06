@@ -73,6 +73,13 @@
 	- Porqué usar métodos en lugar de funciones
 * **methods_several_params**
 	- Múltiples implementaciones del mismo struct
+* **minigrep**. Grep project that contains several concepts:
+	- Organizing code
+	- Using vectors and strings
+	- Handling errors
+	- Using traits and lifetimes where appropriate
+	- Writing tests
+	- Closures, iterators and trait objects.
 * **numeric_operations**. Suma, división, resta, multiplicación
 * **ownership**
 	- Move
@@ -149,6 +156,8 @@
 * **struct_init**. Uso de structs
 * **struct_tuple**. Structs con y sin campos
 * **<span style="color:green">tests</span>**. Uso general de tests
+* **<span style="color:green">tests_order</span>**. 
+  * Ejecución de tests en orden pretendido, ignore de otros, mostrado de output,etc
 * **<span style="color:green">tests_panic</span>**. Captura de panic! en tests
 * **<span style="color:green">test_panic_2</span>**. Captura de mensajes de error de la app y mostrado de panic!
 * **<span style="color:green">test_panic_3</span>**. Uso de Result en lugar de panic!
@@ -165,4 +174,6 @@
 * **vectors**. Declaración y uso de vectores
 * **vectors_enum**. Uso de enums para construir vectores con elementos de distinto tipo
 
-
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_EN.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_ES.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_CA.md) 

@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "tests_panic_3"
+name = "tests_order"
 version = "0.1.0"

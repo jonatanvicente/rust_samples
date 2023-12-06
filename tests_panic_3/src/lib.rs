@@ -1,33 +1,17 @@
-pub struct Guess {
-    pub value: i32,
-}
 
-impl Guess {
-    pub fn new(value: i32) -> Guess {
-        if value < 1 {
-            panic!(
-                "Guess value must be greater than or equal to 1, got {}.",
-                value
-            );
-        } else if value > 100 {
-            panic!(
-                "Guess value must be less than or equal to 100, got {}.",
-                value
-            );
-        }
-        
-        Guess { value }
-    }
-}
+/*
+Retornando error en lugar de panicking
+ */
 
+//OJO we can’t use the #[should_panic] annotation on tests that use Result<T, E>
 #[cfg(test)]
 mod tests {
     #[test]
     fn it_works() -> Result<(), String> {
         if 2 + 2 == 4 {
-            Ok(())
+            Ok(())  //retornamos ok si el test pasa
         } else {
-            Err(String::from("two plus two does not equal four"))
+            Err(String::from("two plus two does not equal four"))  //... mensaje de error si no
         }
     }
 }
