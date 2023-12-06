@@ -148,7 +148,10 @@
 * **struct_full_example_tuples**. Uso de tuplas
 * **struct_init**. Uso de structs
 * **struct_tuple**. Structs con y sin campos
-* **test**. Uso general de tests
+* **<span style="color:green">tests</span>**. Uso general de tests
+* **<span style="color:green">tests_panic</span>**. Captura de panic! en tests
+* **<span style="color:green">test_panic_2</span>**. Captura de mensajes de error de la app y mostrado de panic!
+* **<span style="color:green">test_panic_3</span>**. Uso de Result en lugar de panic!
 * **<span style="color:red">traits</span>**. Trait con importación de crates.
 * **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
 * **typle_type**
