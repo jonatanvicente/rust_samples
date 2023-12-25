@@ -73,29 +73,31 @@
 	- Porqué usar métodos en lugar de funciones
 * **methods_several_params**
 	- Múltiples implementaciones del mismo struct
-* **minigrep**. Grep project that contains several concepts:
+* **<span style="color:purple">minigrep</span>**. Grep project that contains several concepts:
 	- Organizing code
 	- Using vectors and strings
 	- Handling errors
 	- Using traits and lifetimes where appropriate
 	- Writing tests
 	- Closures, iterators and trait objects.
-* **minigrep_2**. 
-* **<span style="color:red">minigrep_3</span>**. Separation of Concerns for Binary Projects
-* **<span style="color:red">minigrep_4</span>**. 
+* **<span style="color:purple">minigrep_2</span>**. 
+* **<span style="color:purple">minigrep_3</span>**. Separation of Concerns for Binary Projects
+* **<span style="color:purple">minigrep_4</span>**. 
 	- Manejo de Err messages amigables
     - Uso de unwrap_or_else
     - Introducción a closures
-* **<span style="color:red">minigrep_5</span>**.
+* **<span style="color:purple">minigrep_5</span>**.
   	- Uso de Box<dyn Error> para manejar errores de forma genérica
 	- Uso de operador ? en lugar de método expect
     - Uso de retorno Ok(()) cuando no hay nada específico que devolver
-* **<span style="color:red">minigrep_6</span>**. Evolución de código a una librería. Cambio de ámbito de funciones.
+* **<span style="color:purple">minigrep_6</span>**. Evolución de código a una librería. Cambio de ámbito de funciones.
 * **<span style="color:green">minigrep_tdd</span>**. 
 	- Uso de #[allow(unused_variables)]
     - Definición de lifetimes
-* **<span style="color:red">minigrep_env</span>**.
+* **<span style="color:purple">minigrep_env</span>**.
     - Uso de variables de entorno (std::env) a partir de proyecto **minigrep_tdd**
+* **<span style="color:purple">minigrep_errs</span>**.
+	- Evolución de minigrep_env utilizando standard_out y standard_error
 * **numeric_operations**. Suma, división, resta, multiplicación
 * **ownership**
 	- Move

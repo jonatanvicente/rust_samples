@@ -18,11 +18,7 @@ impl Config {
 			let file_path = args[2].clone();
 			
 			let ignore_case = env::var("IGNORE_CASE").is_ok();//si viene error no estará fijada la variable
-			/*
-			   Si IGNORE_CASE no está fijada, is_ok retornará false y el programa ejecutará un búsqueda case_sensitive.
-			   Sólo nos importa si está fijada la variable o no, no su valor.
-			
-			 */
+
 			Ok(Config {
 				  query,
 				  file_path,
