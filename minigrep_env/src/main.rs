@@ -1,5 +1,5 @@
 use std::{env, process};
-use minigrep_tdd::Config;
+use minigrep_env::Config;
 
 #[allow(unused_variables)]
 
@@ -7,6 +7,9 @@ use minigrep_tdd::Config;
     cargo run -- frog poem.txt
     cargo run -- body poem.txt
     cargo run -- monomorphization poem.txt
+    cargo run -- to poem.txt
+    IGNORE_CASE=1 cargo run -- to poem.txt (fijamos env var para esa ejecución)
+    cargo test
  */
 
 fn main() {
@@ -18,7 +21,7 @@ fn main() {
     
     
     
-    if let Err(e) = minigrep_tdd::run(config) {
+    if let Err(e) = minigrep_env::run(config) {
         process::exit(1);
     }
     

@@ -92,7 +92,10 @@
     - Uso de retorno Ok(()) cuando no hay nada específico que devolver
 * **<span style="color:red">minigrep_6</span>**. Evolución de código a una librería. Cambio de ámbito de funciones.
 * **<span style="color:green">minigrep_tdd</span>**. 
-	- s
+	- Uso de #[allow(unused_variables)]
+    - Definición de lifetimes
+* **<span style="color:red">minigrep_env</span>**.
+    - Uso de variables de entorno (std::env) a partir de proyecto **minigrep_tdd**
 * **numeric_operations**. Suma, división, resta, multiplicación
 * **ownership**
 	- Move
