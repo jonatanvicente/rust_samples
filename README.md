@@ -86,6 +86,13 @@
 	- Manejo de Err messages amigables
     - Uso de unwrap_or_else
     - Introducción a closures
+* **<span style="color:red">minigrep_5</span>**.
+  	- Uso de Box<dyn Error> para manejar errores de forma genérica
+	- Uso de operador ? en lugar de método expect
+    - Uso de retorno Ok(()) cuando no hay nada específico que devolver
+* **<span style="color:red">minigrep_6</span>**. Evolución de código a una librería. Cambio de ámbito de funciones.
+* **<span style="color:green">minigrep_tdd</span>**. 
+	- s
 * **numeric_operations**. Suma, división, resta, multiplicación
 * **ownership**
 	- Move
