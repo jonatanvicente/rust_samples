@@ -11,3 +11,11 @@ Grep project that contains several concepts:
 * Writing tests
 
 We’ll also briefly introduce closures, iterators, and trait objects.
+
+### Funcionamiento
+
+Búsqueda de una cadena de texto en un archivo de texto.
+```
+$ cargo run -- searchstring example-filename.txt
+
+```

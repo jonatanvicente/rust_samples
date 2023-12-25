@@ -80,6 +80,12 @@
 	- Using traits and lifetimes where appropriate
 	- Writing tests
 	- Closures, iterators and trait objects.
+* **minigrep_2**. 
+* **<span style="color:red">minigrep_3</span>**. Separation of Concerns for Binary Projects
+* **<span style="color:red">minigrep_4</span>**. 
+	- Manejo de Err messages amigables
+    - Uso de unwrap_or_else
+    - Introducción a closures
 * **numeric_operations**. Suma, división, resta, multiplicación
 * **ownership**
 	- Move
