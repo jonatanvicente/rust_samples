@@ -95,15 +95,15 @@ impl<T> Option<T> {
 #[derive(Debug)]
 struct Rectangle {
 	  width: u32,
-	  height: u32,
+	  _height: u32,
 }
 
 //Modificación respecto al ejemplo anterior: uso de FnMut en lugar de FnOnce
 pub fn closure_fnmut() {
 	  let mut list = [
-			Rectangle { width: 10, height: 1 },
-			Rectangle { width: 3, height: 5 },
-			Rectangle { width: 7, height: 12 },
+			Rectangle { width: 10, _height: 1 },
+			Rectangle { width: 3, _height: 5 },
+			Rectangle { width: 7, _height: 12 },
 	  ];
 	  
 	  /*
@@ -118,6 +118,23 @@ pub fn closure_fnmut() {
 	   */
 	  println!("{:#?}", list);
 }
+
+
+pub fn closure_fnmut_2() {
+	  let mut list = [
+			Rectangle { width: 10, _height: 1 },
+			Rectangle { width: 3, _height: 5 },
+			Rectangle { width: 7, _height: 12 },
+	  ];
+	  
+	  let mut num_sort_operations = 0;
+	  list.sort_by_key(|r| {
+			num_sort_operations += 1; //capturamos la ref mutable para sacarla del ámbito. La closure podrá ser llamada más de una vez
+			r.width
+	  });
+	  println!("{:#?}, sorted in {num_sort_operations} operations", list);
+}
+
 
 
 pub fn closure_fnonce(){

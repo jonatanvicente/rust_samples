@@ -60,6 +60,9 @@
 	- Inserción si key no existe
 	- Borrado / sustitución de elementos
 * **if_let**. Uso y comparaciones con Enums
+* **iterators**. 
+	- Creación y consumo de iterators. Mutabilidad de variables
+    - Closures con iterators y consumo
 * **lifetimes**. Ámbito de variables
 * **<span style="color:red">lifetimes_functions</span>**. Ámbito de variables en su utilización con funciones y referencias
 * **<span style="color:red">lifetimes_structs</span>**. Ámbito de variables en structs

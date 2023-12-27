@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "closures_3"
+name = "iterators"
 version = "0.1.0"

@@ -1,4 +1,4 @@
-use closures_3::{closure_definition, closure_mut, closure_move, closure_fnmut, closure_fnonce};
+use closures_3::{closure_definition, closure_mut, closure_move, closure_fnmut, closure_fnonce, closure_fnmut_2};
 
 fn main() {
     
@@ -10,6 +10,7 @@ fn main() {
     println!("~~~~~~~~~~~~~~~~~~~~");
     closure_fnmut();
     println!("~~~~~~~~~~~~~~~~~~~~");
+    closure_fnmut_2();
     closure_fnonce();
     
 }
