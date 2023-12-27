@@ -23,6 +23,12 @@
 	- While
 	- Loop over collections
 	- Reverse loop
+* **closures**. Proyecto de ejemplo con closures.
+* **<span style="color:red">closures_2</span>**. 
+	- Análisis de closures.
+    - Closures equivalentes, con y sin anotaciones. Inferencia de tipos.
+* **<span style="color:red">closures_3</span>**.
+	- Captura de referencias y valores in/out en closures (FnMut, FnOnce y Fn)
 * **enums**
 * **errors_recoverable**
 	- Uso de Result <T, E> para obtención de mensajes de error
