@@ -107,6 +107,8 @@
     - Uso de variables de entorno (std::env) a partir de proyecto **minigrep_tdd**
 * **<span style="color:purple">minigrep_errs</span>**.
 	- Evolución de minigrep_env utilizando standard_out y standard_error
+* **<span style="color:purple">minigrep_iterator</span>**.
+    - Evolución de minigrep_env utilizando iterators
 * **numeric_operations**. Suma, división, resta, multiplicación
 * **ownership**
 	- Move

@@ -1,5 +1,5 @@
 use std::{env, process};
-use minigrep_env::Config;
+use minigrep_iterator::Config;
 
 #[allow(unused_variables)]
 
@@ -13,16 +13,16 @@ use minigrep_env::Config;
  */
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
     
-    let config = Config::build(&args).unwrap_or_else(|err| {
+    //  env::args() -> retorna un iterator
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
     });
     
     
     
-    if let Err(e) = minigrep_env::run(config) {
+    if let Err(e) = minigrep_iterator::run(config) {
         process::exit(1);
     }
     
