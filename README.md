@@ -7,6 +7,8 @@
 	- Uso de arrays
 	- Mutable / immutable
 	- Lectura de parámetros por teclado
+* **cargo_workspace**.
+    - Creación de workspace con Cargo
 * **clone**.
 	- Clonado de variable
 * **constants**
@@ -137,6 +139,7 @@
 	- Owner de una variable
 	- Casuística de invocación automática drop
 	- Scope de variables de retorno
+* **profiles**. Uso de profiles disponibles en Cargo.
 * **project_1**
 	- Invocación a println
 	- Llamada a macros o a functions

@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "minigrep_iterator"
+name = "profiles"
 version = "0.1.0"
