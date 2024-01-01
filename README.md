@@ -168,6 +168,11 @@
 * **slices_int**. Uso de slices con tipos int
 * **slices_parameters**. 
 	- Uso de variables / referencias y slices equivalentes
+* **<span style="color:purple">smart_pointers_box</span>**
+	- Smart Pointer: Box < T >
+* **<span style="color:purple">smart_pointers_deref</span>**
+    - Referenciar / Dereferenciar punteros (**deref**)
+    - Deref Coercion
 * **statements_expressions**
 	- No retornan values
 	- Uso de sentencias / funciones

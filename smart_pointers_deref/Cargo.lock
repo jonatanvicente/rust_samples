@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "smart_pointers_box"
+name = "smart_pointers_deref"
 version = "0.1.0"
