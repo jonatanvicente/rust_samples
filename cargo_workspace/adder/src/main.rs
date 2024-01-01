@@ -1,3 +1,5 @@
+
+#![allow(unused)]
 use add_one;
 use rand::Rng;
 
