@@ -173,6 +173,8 @@
 * **<span style="color:purple">smart_pointers_deref</span>**
     - Referenciar / Dereferenciar punteros (**deref**)
     - Deref Coercion
+* **<span style="color:purple">smart_pointers_drop</span>**
+	- Personalización de un valor cuando sale de ámbito
 * **statements_expressions**
 	- No retornan values
 	- Uso de sentencias / funciones
