@@ -213,6 +213,11 @@
 * **vectors**. Declaración y uso de vectores
 * **vectors_enum**. Uso de enums para construir vectores con elementos de distinto tipo
 
+
+See also [Comprehensive Rust Guide](https://google.github.io/comprehensive-rust/index.html) for exercises and explanations.
+
+
+
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_EN.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_ES.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_CA.md) 

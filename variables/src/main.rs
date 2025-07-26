@@ -1,3 +1,4 @@
+#![allow(warnings)]
 fn main() {
     /*
     let x = 5;
@@ -17,4 +18,7 @@ fn main() {
     let c = 'z'; //String uses double quotes
     let z: char = 'ℤ'; // with explicit type annotation
     let heart_eyed_cat = '😻';
+
+    let s = String::from("Hello, world!");
+    let t = "Hello, world!".to_string();
 }
