@@ -11,8 +11,18 @@ impl<T> Pair<T> {
     }
 }
 
+/**
+   IMPLEMENTACIÓN CONDICIONAL:
+        - Podemos condicionalmente implementar un trait para cualquier tipo que implemente otro trait.
+        - En el ejemplo siguiente (Standard library), el trait ToString es implementado en cualquier tipo que implemente Display trait.
+
+                impl<T: Display> ToString for T {
+                    // --snip--
+                }
+*/
+
 impl<T: Display + PartialOrd> Pair<T> {
-    
+
     //método cmp_display sólo se implementará si T implementa Display (mostrado en pantalla) y PartialOrd (comparaciones)
     fn cmp_display(&self) {
         if self.x >= self.y {
@@ -24,15 +34,3 @@ impl<T: Display + PartialOrd> Pair<T> {
 }
 
 
-/**
-
-   IMPLEMENTACIÓN CONDICIONAL:
-        - Podemos condicionalmente implementar un trait para cualquier tipo que implemente otro trait.
-        - En el ejemplo siguiente (Standard library), el trait ToString es implementado en cualquier tipo que implemente Display trait.
-
-                impl<T: Display> ToString for T {
-                    // --snip--
-                }
-
-
-*/
