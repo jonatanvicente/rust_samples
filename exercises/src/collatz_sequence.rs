@@ -31,11 +31,8 @@ pub fn collatz_length(n: i32) -> i32 {
 
     loop {
         counter+=1;
-        if current_number.is_even() { //even
-            current_number = current_number / 2;
-        } else { //odd
-            current_number = (3 * current_number) + 1;
-        }
+        current_number = if current_number.is_even() { current_number / 2 } else { (3 * current_number) + 1 };
+
         if current_number == 1 {
             counter +=1;
             return counter;

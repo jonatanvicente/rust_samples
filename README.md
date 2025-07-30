@@ -41,6 +41,9 @@
 	- Closures
 * **exercises**. Several exercises from the book "Comprehensive Rust" (https://google.github.io/comprehensive-rust/index.html)
     - Fibonacci Sequence
+    - Nested Arrays
+    - Collatz Conjecture
+    - Geometry vectors
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**
