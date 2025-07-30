@@ -20,7 +20,7 @@ fn main() {
 
 /*
   OUTPUT:
-  [src/main.rs:5] args = [
+  [src/fibonacci:5] args = [
     "target/debug/minigrep",
 ]
     - OJO primer elemento del vector -> binario que ejecutamos

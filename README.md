@@ -39,6 +39,8 @@
 	- Invocación de macro panic!
 	- Asignación de env var RUST_BACKTRACE=full para mostrado de traza completa
 	- Closures
+* **exercises**. Several exercises from the book "Comprehensive Rust" (https://google.github.io/comprehensive-rust/index.html)
+    - Fibonacci Sequence
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**
