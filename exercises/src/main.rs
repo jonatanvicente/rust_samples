@@ -4,6 +4,7 @@ mod nested_arrays;
 mod collatz_sequence;
 mod geometry;
 mod elevator_events;
+mod expression_evaluation;
 
 fn main() {
 

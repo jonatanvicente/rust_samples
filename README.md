@@ -45,6 +45,7 @@
     - Collatz Conjecture (loops and tests)
     - Geometry vectors (arrays desestructured as vectors)
     - Events (enums)
+    - Expression Evaluation ()
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**
