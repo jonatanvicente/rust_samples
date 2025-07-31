@@ -41,9 +41,10 @@
 	- Closures
 * **exercises**. Several exercises from the book "Comprehensive Rust" (https://google.github.io/comprehensive-rust/index.html)
     - Fibonacci Sequence
-    - Nested Arrays
-    - Collatz Conjecture
-    - Geometry vectors
+    - Nested Arrays (loops anidated)
+    - Collatz Conjecture (loops and tests)
+    - Geometry vectors (arrays desestructured as vectors)
+    - Events (enums)
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**
