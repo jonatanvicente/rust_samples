@@ -44,8 +44,9 @@
     - Nested Arrays (loops anidated)
     - Collatz Conjecture (loops and tests)
     - Geometry vectors (arrays desestructured as vectors)
-    - Events (enums)
-    - Expression Evaluation ()
+    - Elevator Events (enums)
+    - Expression Evaluation (match, Box)
+    - Counter (Hashmaps, pointers)
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**

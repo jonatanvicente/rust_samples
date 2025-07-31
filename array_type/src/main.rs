@@ -1,7 +1,7 @@
 use std::io;
 fn main() {
 
-    let _a: [i32; 5] = [1, 2, 3, 4, 5];
+    let _a: [i32; 5] = [1, 2, 3, 4, 5]; //  _[varName] -> var never used
 
     //You can also initialize an array to contain the same value for each element by specifying the initial value,
     // followed by a semicolon, and then the length of the array in square brackets

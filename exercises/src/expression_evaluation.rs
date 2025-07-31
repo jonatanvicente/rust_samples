@@ -11,18 +11,21 @@ enum Operation {
 #[derive(Debug)]
 enum Expression {
     /// An operation on two subexpressions.
+    /// Box: pointer to heap-allocated data (allocated on stack)
     Op { op: Operation, left: Box<Expression>, right: Box<Expression> },
     /// A literal value
     Value(i64),
 }
 
-// Core of the expression evaluation: exercise
+/// Core of the expression evaluation: exercise
+/// Generates an expression tree and evaluates it
+/// Returns an Expression (see above)
 fn eval(e: Expression) -> i64 {
-    match e {
+    match e {  // match compares e value with the patterns defined below
         Expression::Op { op, left, right } => {
-            let left = eval(*left);
+            let left = eval(*left); // Box is a smart pointer
             let right = eval(*right);
-            match op {
+            match op {  // set the operation to perform
                 Operation::Add => left + right,
                 Operation::Sub => left - right,
                 Operation::Mul => left * right,

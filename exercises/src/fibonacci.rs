@@ -20,6 +20,11 @@ pub fn fib(n: u32) -> u32 {
     }
 }
 
+pub fn go(){
+    let n = 5;
+    println!("Fib({n}) = {}", fib(n));
+}
+
 #[cfg(test)]
 mod tests {
     use crate::fibonacci::fib;

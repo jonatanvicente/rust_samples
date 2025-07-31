@@ -22,3 +22,11 @@ pub fn normalize(vector: &mut [f64; 3]) {
     }
 }
 
+pub fn go(){
+    println!("Magnitude of a unit vector: {}", magnitude(&[0.0, 1.0, 0.0]));
+    let mut v = [1.0, 2.0, 9.0];
+    println!("Magnitude of {v:?}: {}", magnitude(&v));
+    normalize(&mut v);
+    println!("Magnitude of {v:?} after normalization: {}", magnitude(&v));
+}
+

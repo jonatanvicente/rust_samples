@@ -23,6 +23,8 @@
  */
 
 use num::{Integer};
+use crate::collatz_sequence;
+
 /// Determine the length of the collatz sequence beginning at `n`.
 pub fn collatz_length(n: i32) -> i32 {
 
@@ -38,6 +40,10 @@ pub fn collatz_length(n: i32) -> i32 {
             return counter;
         }
     }
+}
+
+pub fn go(){
+    println!("Length: {}", collatz_length(11)); // should be 15
 }
 
 #[cfg(test)]
