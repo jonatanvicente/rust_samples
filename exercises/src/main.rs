@@ -7,6 +7,12 @@ mod elevator_events;
 mod expression_evaluation;
 mod logger_trait;
 mod counter;
+mod generic_min;
+mod log_filter;
+mod ROT13;
+mod health_statistics;
+mod protobuf;
+mod iterator_chaining;
 
 fn main() {
 
@@ -24,6 +30,7 @@ fn main() {
     logger_trait::go();
     //counter
     counter::go();
+    log_filter::go();
 
 }
 
