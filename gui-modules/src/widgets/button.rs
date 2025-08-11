@@ -1,4 +1,3 @@
-// ---- src/widgets/button.rs ----
 use super::{Label, Widget};
 
 pub struct Button {

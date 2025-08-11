@@ -13,10 +13,12 @@ mod ROT13;
 mod health_statistics;
 mod protobuf;
 mod iterator_chaining;
+mod pointers;
+mod ownership;
 
 fn main() {
 
-    //fibonacci example
+/*    //fibonacci example
     fibonacci::go();
     //Collatz sequence example
     collatz_sequence::go();
@@ -30,7 +32,8 @@ fn main() {
     logger_trait::go();
     //counter
     counter::go();
-    log_filter::go();
+    log_filter::go();*/
+    pointers::go();
 
 }
 

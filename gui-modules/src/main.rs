@@ -1,6 +1,6 @@
-//mod widgets;
+mod widgets;
 
-//use widgets::{Button, Label, Widget, Window};
+use widgets::{Button, Label, Widget, Window};
 
 fn main() {
     let mut window = Window::new("Rust GUI Demo 1.23");
