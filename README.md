@@ -157,6 +157,9 @@
 	- Importación de módulos en Cargo.toml
 	- Uso de pub use en lib.rs para utilización pública de un módulo descrito 
 	- Importación del módulo desde main.rs
+* **ref_cell**
+	- Uso de RefCell<T> para mutabilidad interior (unsafe)
+    - Allowing Multiple Owners of Mutable Data with Rc<T> and RefCell<T>
 * **restaurant**
 	- Creación y uso de módulos. Module tree de ejemplo
 * **restaurant_2**. Creación de crate (lib) e invocación a módulos de librería
@@ -221,6 +224,7 @@
 * **variables**. Tipos de variables
 * **vectors**. Declaración y uso de vectores
 * **vectors_enum**. Uso de enums para construir vectores con elementos de distinto tipo
+* **web_server**. Simple web server
 
 
 See also [Comprehensive Rust Guide](https://google.github.io/comprehensive-rust/index.html) for exercises and explanations.
