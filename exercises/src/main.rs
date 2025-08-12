@@ -18,10 +18,11 @@ mod ownership;
 mod luhn_algorithm;
 mod result_rewriting;
 mod FFI_wrapper;
+mod reverse;
 
 fn main() {
 
-/*    //fibonacci example
+    //fibonacci example
     fibonacci::go();
     //Collatz sequence example
     collatz_sequence::go();
@@ -35,7 +36,7 @@ fn main() {
     logger_trait::go();
     //counter
     counter::go();
-    log_filter::go();*/
+    log_filter::go();
     pointers::go();
 
 }
