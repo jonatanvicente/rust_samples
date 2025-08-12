@@ -3,13 +3,13 @@ use std::io::ErrorKind;
 
 fn main() {
 
-    //match_error();
-    //different_errors();
+    match_error();
+    different_errors();
     closures();
 
 }
 
-/*fn match_error() {
+fn match_error() {
     /*
      The return type of File::open is a Result<T, E>
      The generic parameter T has been filled in by the implementation of File::open with the type of
@@ -19,7 +19,7 @@ fn main() {
      */
     let greeting_file_result = File::open("hello.txt");
 
-    let greeting_file = match greeting_file_result {
+    let _greeting_file = match greeting_file_result {
         Ok(file) => file,
         Err(error) => panic!("Problem opening the file: {:?}", error),
     };
@@ -30,7 +30,7 @@ fn different_errors() {
 
         let greeting_file_result = File::open("hello.txt");
 
-        let greeting_file = match greeting_file_result {
+        let _greeting_file = match greeting_file_result {
             Ok(file) => file,
             Err(error) => match error.kind() {
                 ErrorKind::NotFound => match File::create("hello.txt") {
@@ -42,7 +42,7 @@ fn different_errors() {
                 }
             },
         };
-    }*/
+    }
 
 fn closures() {
     //unwrap_or_else -> metodo para evitar muchos match anidados

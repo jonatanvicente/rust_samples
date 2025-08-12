@@ -15,6 +15,9 @@ mod protobuf;
 mod iterator_chaining;
 mod pointers;
 mod ownership;
+mod luhn_algorithm;
+mod result_rewriting;
+mod FFI_wrapper;
 
 fn main() {
 

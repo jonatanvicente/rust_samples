@@ -3,7 +3,7 @@
 Retornando error en lugar de panicking
  */
 
-//OJO we can’t use the #[should_panic] annotation on tests that use Result<T, E>
+//WATCH OUT we can’t use the #[should_panic] annotation on tests that use Result<T, E>
 #[cfg(test)]
 mod tests {
     #[test]
