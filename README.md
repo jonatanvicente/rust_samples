@@ -39,7 +39,7 @@
 	- Invocación de macro panic!
 	- Asignación de env var RUST_BACKTRACE=full para mostrado de traza completa
 	- Closures
-* **exercises**. Several exercises from the book "Comprehensive Rust" (https://google.github.io/comprehensive-rust/index.html)
+* **exercises**. Several exercises from the book "Comprehensive Rust" (https://google.github.io/comprehensive-rust/index.html) and others.
     - Fibonacci Sequence
     - Nested Arrays (loops anidated)
     - Collatz Conjecture (loops and tests)
@@ -48,6 +48,8 @@
     - Expression Evaluation (match, Box)
     - Counter (Hashmaps, pointers)
     - Result Rewriting (Result, Box)
+    - Ownership and Borrowing (ownership, references, lifetimes)
+    - Mutable References
 * **floating_point**. Variables float
 * **functions**. Declaración e invocaciones
 * **functions_with_return**
@@ -148,6 +150,9 @@
 	- Owner de una variable
 	- Casuística de invocación automática drop
 	- Scope de variables de retorno
+* **patterns**.
+    - Object Oriented Programming (OOP). Inheritance and polymorphism
+    - Callback pattern
 * **profiles**. Uso de profiles disponibles en Cargo.
 * **project_1**
 	- Invocación a println
