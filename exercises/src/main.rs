@@ -20,6 +20,7 @@ mod result_rewriting;
 mod FFI_wrapper;
 mod reverse;
 mod mut_references;
+mod lifetimes;
 
 fn main() {
 
