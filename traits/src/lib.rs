@@ -1,5 +1,5 @@
 
-
+//similar to interfaces. Summary is defined at aggregator crate
 pub trait Summary { //definición
     fn summarize(&self) -> String {//método declarado
         String::from("(Read more...)")
@@ -26,7 +26,7 @@ pub struct Tweet {
     pub retweet: bool,
 }
 
-impl Summary for Tweet {  //impl
+impl Summary for Tweet {  //Type that implements Summary
     fn summarize(&self) -> String {
         format!("{}: {}", self.username, self.content)
     }

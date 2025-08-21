@@ -217,7 +217,9 @@
 * **<span style="color:green">tests_panic</span>**. Captura de panic! en tests
 * **<span style="color:green">tests_panic_2</span>**. Captura de mensajes de error de la app y mostrado de panic!
 * **<span style="color:green">tests_panic_3</span>**. Uso de Result en lugar de panic!
-* **<span style="color:red">traits</span>**. Trait con importación de crates.
+* **<span style="color:red">traits</span>**. 
+  * Trait con importación de crates.
+  * Uso de aggregator crate.
 * **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
 * **typle_type**
 	- Uso de diferentes tipos en tuplas
@@ -234,6 +236,7 @@
 
 See also [Comprehensive Rust Guide](https://google.github.io/comprehensive-rust/index.html) for exercises and explanations.
 A good glossary are located at [Comprehensive Rust Guide](https://google.github.io/comprehensive-rust/glossary.html) as well.
+And, of course, is highly recommended analyze the book [Rust for Rustaceans](https://nostarch.com/rust-rustaceans). Not for beginners.
 
 
 

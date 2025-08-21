@@ -21,6 +21,7 @@ mod FFI_wrapper;
 mod reverse;
 mod mut_references;
 mod lifetimes;
+mod layout;
 
 fn main() {
 

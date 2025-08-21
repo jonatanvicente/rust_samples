@@ -1,3 +1,7 @@
+/*
+    aggregator crate contains the Summary trait and Tweet struct
+ */
+
 use aggregator::{Summary, Tweet};
 
 fn main() {
