@@ -12,7 +12,7 @@ fn main() {
         retweet: false,
     };
 
-    println!("1 new tweet: {}", tweet.summarize()); //muestra resumen de data existente, pertenece a aggregator
+    println!("1 new tweet: {}", tweet.summarize());
     println!("{}", some_function(&String::from("Tweet"), &String::from("pp")));
     println!("{}", returns_summarizable().summarize());
 

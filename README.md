@@ -221,6 +221,8 @@
   * Trait con importación de crates.
   * Uso de aggregator crate.
 * **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
+* **<span style="color:red">trait_as_parameters</span>**
+  * Different implementations and receiving traits as parameters 
 * **typle_type**
 	- Uso de diferentes tipos en tuplas
 	- Desestructuración de tuplas
@@ -231,6 +233,9 @@
 * **variables**. Tipos de variables
 * **vectors**. Declaración y uso de vectores
 * **vectors_enum**. Uso de enums para construir vectores con elementos de distinto tipo
+* **vtables**.
+	- Traits uses
+    - vtables: polymorphism at runtime
 * **web_server**. Simple web server
 
 
