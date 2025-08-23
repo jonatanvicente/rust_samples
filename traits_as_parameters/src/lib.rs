@@ -1,5 +1,5 @@
 
-
+//aggregator trait
 pub trait Summary { //definición (implementation from aggregator
     fn summarize(&self) -> String {//método declarado
         String::from("(Read more...)")

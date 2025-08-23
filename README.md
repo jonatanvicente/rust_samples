@@ -220,6 +220,8 @@
 * **<span style="color:red">traits</span>**. 
   * Trait con importación de crates.
   * Uso de aggregator crate.
+  * Uses with references.
+  * Document generation
 * **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
 * **<span style="color:red">trait_as_parameters</span>**
   * Different implementations and receiving traits as parameters 
