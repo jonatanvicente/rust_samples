@@ -35,6 +35,9 @@
 * **errors_recoverable**
 	- Uso de Result <T, E> para obtención de mensajes de error
 	- Uso de método unwrap_or_else para evitar match anidados	
+* **errors_representation**
+    - Best practices to represent errors
+    - Uses of 'static with errors
 * **errors_unrecoverable**
 	- Invocación de macro panic!
 	- Asignación de env var RUST_BACKTRACE=full para mostrado de traza completa
@@ -223,6 +226,8 @@
   * Uses with references.
   * Document generation
 * **<span style="color:red">traits_default_implementation</span>**. Trait con implementación de métodos por default
+* **traits_marker_types**
+  - Semantic Typic (to ensure the meaning of the value) 
 * **<span style="color:red">trait_as_parameters</span>**
   * Different implementations and receiving traits as parameters 
 * **typle_type**

@@ -5,6 +5,7 @@
 use aggregator::{Summary, Tweet};
 
 #[doc = "This function shows how to use traits using aggregator crate"]
+//#[doc(hidden)] //Lets you hide a public item from your documentation without making it inaccessible to code that happens to know it is there.
 fn main() {
     let tweet = Tweet {
         username: String::from("horse_ebooks"),
