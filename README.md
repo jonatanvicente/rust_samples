@@ -80,14 +80,16 @@
 	- Creación y consumo de iterators. Mutabilidad de variables
     - Closures con iterators y consumo
 * **lifetimes**. Ámbito de variables
-* **<span style="color:red">lifetimes_functions</span>**. Ámbito de variables en su utilización con funciones y referencias
-* **<span style="color:red">lifetimes_structs</span>**. Ámbito de variables en structs
 * **<span style="color:red">lifetimes_elision</span>**. 
 	- Análisis de lifetimes en funciones
     - Análisis de reglas del compilador para asignación de lifetimes
+* **<span style="color:red">lifetimes_functions</span>**. Ámbito de variables en su utilización con funciones y referencias
+* **<span style="color:red">lifetimes_structs</span>**. Ámbito de variables en structs
 * **<span style="color:red">lifetimes_static</span>**.
     - Uso de lifetime 'static
 	- Análisis de lifetimes en genéricos y traits unidos
+* **macros_declarative**.
+	- Declarative Macros: declaration and uses
 * **match_control_flow**
 	- Uso de None y Some (null no existe)
 	- match
