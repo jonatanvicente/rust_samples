@@ -79,6 +79,8 @@
 * **iterators**. 
 	- Creación y consumo de iterators. Mutabilidad de variables
     - Closures con iterators y consumo
+* **libraries**. 
+  	- Useful but lesser-known libraries 
 * **lifetimes**. Ámbito de variables
 * **<span style="color:red">lifetimes_elision</span>**. 
 	- Análisis de lifetimes en funciones
