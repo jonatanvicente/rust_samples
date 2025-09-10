@@ -7,6 +7,9 @@
 	- Uso de arrays
 	- Mutable / immutable
 	- Lectura de parámetros por teclado
+* **asynchrony**.
+	- Async / Await
+	- Futures
 * **cargo_workspace**.
     - Creación de workspace con Cargo
 * **clone**.
