@@ -164,6 +164,12 @@
 	- Owner de una variable
 	- Casuística de invocación automática drop
 	- Scope de variables de retorno
+* **parallelism**
+    - Async/await concurrency
+  	- Channels for message passing between threads
+    - Data parallelism example using rayon
+    - Parallel iterators with rayon
+    - Shared state with Mutex and Arc
 * **patterns**.
     - Object Oriented Programming (OOP). Inheritance and polymorphism
     - Callback pattern
