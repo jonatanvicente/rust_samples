@@ -22,11 +22,12 @@ mod reverse;
 mod mut_references;
 mod lifetimes;
 mod layout;
+mod librarybooktracker;
 
 fn main() {
 
     //fibonacci example
-    fibonacci::go();
+/*    fibonacci::go();
     //Collatz sequence example
     collatz_sequence::go();
     // nested arrays example
@@ -40,8 +41,10 @@ fn main() {
     //counter
     counter::go();
     log_filter::go();
-    pointers::go();
+    pointers::go();*/
 
+    // exercise library book tracker
+    librarybooktracker::go();
 }
 
 
