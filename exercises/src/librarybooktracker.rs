@@ -24,5 +24,22 @@ impl book {
 }
 
 pub fn go(){
-    //
+    let book_a = book::new("Don Quijote".to_string(), "Miguel de Cervantes".to_string(), true);
+    let book_b = book::new("The Raven".to_string(), "Edgar Allan Poe".to_string(), true);
+    let book_c = book::new("Moby Dick".to_string(), "Herman Melville".to_string(), true);
+
+    let mut books: Vec<book> = Vec::new();
+    books.push(book_a);
+    books.push(book_b);
+    books.push(book_c);
+
+    print_library_status(&books);
+}
+
+fn print_library_status(books: &[book]){
+
+    for book in books {
+        println!("Name: {}, is available: {}", book.title, book.is_available);
+    }
+
 }
