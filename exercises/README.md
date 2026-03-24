@@ -27,3 +27,48 @@ In your main function:
 
 **Why this exercise?**
 This forces you to distinguish between owning the data (the Vector), borrowing the data (printing the list), and mutably borrowing the data (checking a book out).
+
+---
+
+### The Challenge: Galactic Logistics System
+
+#### Phase 1: The Foundations (Structs & Enums)
+
+First, define the **core data types**. This will test your ability to nest structures and use Enums for state.
+1. **CargoCategory** (Enum): Should have variants like Mineral, Medicine, and Technology.
+2. **CargoItem** (Struct): Needs a name, a category, and a price_per_unit (f64).
+3. **Ship** (Struct): Needs a name, a capacity (u32), and a cargo_hold (a Vec of CargoItem).
+4. **SpaceStation** (Struct): Needs a name and a docked_ships list.
+
+ 
+#### Phase 2: The Borrowing Gauntlet
+
+Implement the following functions. Pay close attention to the function signatures—this is where the borrowing logic lives.
+- **Task A**: The Manifest (Immutable Borrowing)
+    - Write a function print_ship_manifest that takes a reference to a Ship and prints every item in its hold.
+    - Constraint: The ship must not be destroyed (dropped) after printing.
+- **Task B**: The Quality Check (Mutable Borrowing)
+    - Write a function apply_space_wear that takes a mutable reference to a CargoItem. It should reduce the price_per_unit by 10% due to "radiation damage."
+- **Task C**: Docking (Moving Ownership)
+    - Write a function dock_ship that takes a SpaceStation and a Ship, and adds the ship to the station's docked_ships list.
+    - Critical Question: Should the station own the ship, or just borrow it? (For this exercise: the station should take ownership).
+
+#### Phase 3: Complex Logic (The "Sticky" Situations)
+
+This is where most beginners hit a wall with the borrow checker.
+1. **The Transfer Logic:** Implement a function transfer_cargo(source: &mut Ship, destination: &mut Ship, item_name: &str).
+    - Find the item in the source ship by name.
+    - Remove it from the source (moving it out of the vector).
+    - Push it into the destination ship.
+    - Hint: You will need to handle the case where the item isn't found.
+2. **The Audit:**
+    - Implement a function calculate_total_value(station: &SpaceStation) -> f64.
+    - It must iterate through every ship, and every item in every ship.
+    - Formula:$$TotalValue = \sum_{ships} \sum_{items} (price\_per\_unit)$$
+    - Constraint: You must do this without taking ownership of the station or the ships.
+
+#### Phase 4: Refactoring for Safety
+
+Once you have the logic, try to break it to see what the compiler says:
+    - The "Double Borrow" Trap: Try to write a loop that iterates over a ship's cargo (&ship.cargo_hold) and, inside that loop, tries to call apply_space_wear on the same item.
+    - The "Dangling Reference" Trap: Try to write a function that searches for the most expensive item in a ship and returns a reference to it. Then, try to clear the ship's cargo and see if you can still use that reference.

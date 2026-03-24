@@ -34,6 +34,23 @@ pub fn go(){
     books.push(book_c);
 
     print_library_status(&books);
+
+    /*
+        - We are calling IntoIterator::into_iter(books). Tis consumes the vector
+        - books is moved into the loop. Each book is moved out of the vector and into the variable book.
+        - By default, new var book isn't mut.
+        - for book in books is not valid
+        - for book in &mut books, you are iterating over mutable references to the items inside the vector.
+            No Move Occurs: "Hold onto the vector, just give me a temporary 'key' to change each item inside it one by one."
+            Mutable Access: The variable book now has the type &mut Book. Because it is a mutable reference, you are allowed to call methods like change() which likely require &mut self.
+            Vector Survives: After the loop, the vector books is still alive and contains all your updated data.
+     */
+
+    for book in &mut books{
+        book.check_out();
+    } //Rust generally assumes that if you're iterating over a collection by value, you're finishing it off, not updating it for later use.
+
+    print_library_status(&books);
 }
 
 fn print_library_status(books: &[book]){
