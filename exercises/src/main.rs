@@ -23,6 +23,7 @@ mod mut_references;
 mod lifetimes;
 mod layout;
 mod librarybooktracker;
+mod galactic_logistics;
 
 fn main() {
 
@@ -44,7 +45,9 @@ fn main() {
     pointers::go();*/
 
     // exercise library book tracker
-    librarybooktracker::go();
+    //librarybooktracker::go();
+    // exercise galactic logistics
+      galactic_logistics::go();
 }
 
 

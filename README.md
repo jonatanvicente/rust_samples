@@ -262,10 +262,14 @@
     - vtables: polymorphism at runtime
 * **web_server**. Simple web server
 
+This project contains also other samples and exercises, see [README.md](exercises/README.md) for more details.
 
 See also [Comprehensive Rust Guide](https://google.github.io/comprehensive-rust/index.html) for exercises and explanations.
+
 A good glossary are located at [Comprehensive Rust Guide](https://google.github.io/comprehensive-rust/glossary.html) as well.
+
 And, of course, is highly recommended analyze the book [Rust for Rustaceans](https://nostarch.com/rust-rustaceans). Not for beginners.
+
 
 
 
