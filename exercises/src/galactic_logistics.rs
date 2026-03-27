@@ -1,5 +1,6 @@
 use std::fmt;
 
+//#[derive(Clone, Copy)] We don't need this if implementing From (below)
 enum CargoCategory {
     Mineral,
     Medicine,
@@ -12,6 +13,19 @@ impl fmt::Display for CargoCategory {
             CargoCategory::Mineral => write!(f, "Mineral"),
             CargoCategory::Medicine => write!(f, "Medicine"),
             CargoCategory::Technology => write!(f, "Technology"),
+        }
+    }
+}
+
+/*
+    By implementing next function, we change the rules. We create an identical copy
+ */
+impl From<&CargoCategory> for CargoCategory {
+    fn from(category_ref: &CargoCategory) -> Self {
+        match category_ref {
+            CargoCategory::Mineral => CargoCategory::Mineral,
+            CargoCategory::Medicine => CargoCategory::Medicine,
+            CargoCategory::Technology => CargoCategory::Technology,
         }
     }
 }
@@ -36,10 +50,9 @@ struct SpaceStation {
 
 fn print_ship_manifest(mut ship: Ship){
 
-    for item in &mut ship.cargo_hold {
-        /*let category = CargoCategory::from(item.category);*/
-        //println!("Cargo Item: {}, Cargo Category: {}, Cargo Price per Unit: {}", item.name, category, item.price_per_unit );
-        println!("Cargo Item: {}, Cargo Price per Unit: {}", item.name, item.price_per_unit );
+    for item in &mut ship.cargo_hold {//item is a reference
+        let category = CargoCategory::from(&item.category);
+        println!("Cargo Item: {}, Cargo Category: {}, Cargo Price per Unit: {}", item.name, category, item.price_per_unit );
     }
 }
 
@@ -50,6 +63,7 @@ fn quality_check(){
 fn docking(){
 
 }
+
 fn task_a() {
     let item_a = CargoItem {
         name: String::from("ESP32"),
