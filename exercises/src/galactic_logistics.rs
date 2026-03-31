@@ -56,15 +56,20 @@ fn print_ship_manifest(mut ship: Ship){
     }
 }
 
-fn quality_check(){
+fn apply_space_wear(mut cargoItem:CargoItem){
+
+    cargoItem.price_per_unit *= 0.9;
+    println!("New price_per_unit: {}", cargoItem.price_per_unit);
 
 }
 
-fn docking(){
-
+fn dock_ship(mut station:SpaceStation, ship:Ship) {
+    station.docked_ships.push(ship);
 }
 
-fn task_a() {
+
+
+pub fn go() {
     let item_a = CargoItem {
         name: String::from("ESP32"),
         category: CargoCategory::Technology,
@@ -89,7 +94,25 @@ fn task_a() {
 
     print_ship_manifest(ship);
 
-}
-pub fn go(){
-    task_a()
+    //
+    let item_c = CargoItem {
+        name: String::from("ESP32"),
+        category: CargoCategory::Technology,
+        price_per_unit: 3.0
+    };
+
+    apply_space_wear(item_c);
+
+    //
+    let spaceStation = SpaceStation {
+        name: String::from("Galaktika"),
+        docked_ships: Vec::new()
+    };
+    let ship = Ship {
+        name: String::from("Union T962"),
+        capacity: 5,
+        cargo_hold: Vec::new()
+    };
+
+    dock_ship(spaceStation, ship);
 }

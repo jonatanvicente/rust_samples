@@ -45,12 +45,12 @@ First, define the **core data types**. This will test your ability to nest struc
 
 Implement the following functions. Pay close attention to the function signatures—this is where the borrowing logic lives.
 - **Task A**: The Manifest (Immutable Borrowing)
-    - Write a function print_ship_manifest that takes a reference to a Ship and prints every item in its hold.
+    - Write a function **print_ship_manifest** that takes a reference to a Ship and prints every item in its hold.
     - Constraint: The ship must not be destroyed (dropped) after printing.
 - **Task B**: The Quality Check (Mutable Borrowing)
-    - Write a function apply_space_wear that takes a mutable reference to a CargoItem. It should reduce the price_per_unit by 10% due to "radiation damage."
+    - Write a function **apply_space_wear** that takes a mutable reference to a CargoItem. It should reduce the price_per_unit by 10% due to "radiation damage."
 - **Task C**: Docking (Moving Ownership)
-    - Write a function dock_ship that takes a SpaceStation and a Ship, and adds the ship to the station's docked_ships list.
+    - Write a function **dock_ship** that takes a SpaceStation and a Ship, and adds the ship to the station's docked_ships list.
     - Critical Question: Should the station own the ship, or just borrow it? (For this exercise: the station should take ownership).
 
 #### Phase 3: Complex Logic (The "Sticky" Situations)
