@@ -56,7 +56,7 @@ Implement the following functions. Pay close attention to the function signature
 #### Phase 3: Complex Logic (The "Sticky" Situations)
 
 This is where most beginners hit a wall with the borrow checker.
-1. **The Transfer Logic:** Implement a function transfer_cargo(source: &mut Ship, destination: &mut Ship, item_name: &str).
+1. **The Transfer Logic:** Implement a function **transfer_cargo**(source: &mut Ship, destination: &mut Ship, item_name: &str).
     - Find the item in the source ship by name.
     - Remove it from the source (moving it out of the vector).
     - Push it into the destination ship.

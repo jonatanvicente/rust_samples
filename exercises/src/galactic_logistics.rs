@@ -67,6 +67,20 @@ fn dock_ship(mut station:SpaceStation, ship:Ship) {
     station.docked_ships.push(ship);
 }
 
+fn transfer_cargo(source: &mut Ship, destination: &mut Ship, item_name: &str){
+
+    //find the item in the source ship by name.
+    let target_index: Option<usize> = source.cargo_hold.iter().position(|item| item.name == item_name);
+
+    //remove it from the source
+    if let Some(index) = target_index {
+        let removed_ship = source.cargo_hold.remove(index);
+        println!("Removed ship: {}", removed_ship.name);
+    }else {
+        println!("Ship '{}' not found", item_name);
+    }
+}
+
 
 
 pub fn go() {
@@ -115,4 +129,7 @@ pub fn go() {
     };
 
     dock_ship(spaceStation, ship);
+    //
+
 }
+
