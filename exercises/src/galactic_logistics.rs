@@ -1,4 +1,5 @@
 use std::fmt;
+use std::ops::Index;
 
 //#[derive(Clone, Copy)] We don't need this if implementing From (below)
 enum CargoCategory {
@@ -76,6 +77,8 @@ fn transfer_cargo(source: &mut Ship, destination: &mut Ship, item_name: &str){
     if let Some(index) = target_index {
         let removed_ship = source.cargo_hold.remove(index);
         println!("Removed ship: {}", removed_ship.name);
+        destination.cargo_hold.push(removed_ship);
+        println!("Added ship: {}", destination.cargo_hold.index(0).name);
     }else {
         println!("Ship '{}' not found", item_name);
     }
@@ -131,5 +134,27 @@ pub fn go() {
     dock_ship(spaceStation, ship);
     //
 
+    let uranium = CargoItem {
+        name: String::from("Uranium"),
+        category: CargoCategory::Mineral,
+        price_per_unit: 95.0
+    };
+    let cargo_name = uranium.name.clone();
+
+    let mut v: Vec<CargoItem> = Vec::new();
+    v.push(uranium);
+
+    let mut origin_ship = Ship {
+        name: String::from("Aerospatial Train"),
+        capacity: 5,
+        cargo_hold: v
+    };
+
+    let mut destination_ship = Ship {
+        name: String::from("Intergalactical Transporter"),
+        capacity: 2,
+        cargo_hold: Vec::new()
+    };
+    transfer_cargo(&mut origin_ship, &mut destination_ship, cargo_name.as_str());
 }
 
