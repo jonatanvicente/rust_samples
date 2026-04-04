@@ -62,7 +62,7 @@ This is where most beginners hit a wall with the borrow checker.
     - Push it into the destination ship.
     - Hint: You will need to handle the case where the item isn't found.
 2. **The Audit:**
-    - Implement a function calculate_total_value(station: &SpaceStation) -> f64.
+    - Implement a function **calculate_total_value(station: &SpaceStation) -> f64**.
     - It must iterate through every ship, and every item in every ship.
     - Formula:$$TotalValue = \sum_{ships} \sum_{items} (price\_per\_unit)$$
     - Constraint: You must do this without taking ownership of the station or the ships.

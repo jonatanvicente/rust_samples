@@ -64,7 +64,7 @@ fn apply_space_wear(mut cargoItem:CargoItem){
 
 }
 
-fn dock_ship(mut station:SpaceStation, ship:Ship) {
+fn dock_ship(station: &mut SpaceStation, ship: Ship) {
     station.docked_ships.push(ship);
 }
 
@@ -82,6 +82,13 @@ fn transfer_cargo(source: &mut Ship, destination: &mut Ship, item_name: &str){
     }else {
         println!("Ship '{}' not found", item_name);
     }
+}
+
+fn calculate_total_value(station: &SpaceStation) -> f64 {
+   let result:f64 = station.docked_ships.iter().flat_map(|ship| &ship.cargo_hold).map(|item| item.price_per_unit).sum();
+   println!("Total value of cargo in station '{}': {}", station.name, result);
+   result
+
 }
 
 
@@ -121,7 +128,7 @@ pub fn go() {
     apply_space_wear(item_c);
 
     //
-    let spaceStation = SpaceStation {
+    let mut spaceStation = SpaceStation {
         name: String::from("Galaktika"),
         docked_ships: Vec::new()
     };
@@ -130,8 +137,7 @@ pub fn go() {
         capacity: 5,
         cargo_hold: Vec::new()
     };
-
-    dock_ship(spaceStation, ship);
+    dock_ship(&mut spaceStation, ship);
     //
 
     let uranium = CargoItem {
@@ -156,5 +162,14 @@ pub fn go() {
         cargo_hold: Vec::new()
     };
     transfer_cargo(&mut origin_ship, &mut destination_ship, cargo_name.as_str());
+
+    //
+    let mut spaceStation = SpaceStation {
+        name: String::from("Galaktika"),
+        docked_ships: Vec::new()
+    };
+    spaceStation.docked_ships.push(origin_ship);
+
+    calculate_total_value(&spaceStation) ;
 }
 
