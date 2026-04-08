@@ -172,6 +172,15 @@ pub fn go() {
 
 fn refactoring() {
 
+    //double borrow trap
+    let space_station = make_space_station();
+
+    let v_ships = space_station.docked_ships;
+    let mut v: Vec<CargoItem> = v_ships.into_iter().flat_map(|ship| ship.cargo_hold).collect();
+    for item in v {  // item is CargoItem (owned) - v is consumed
+        apply_space_wear(item);
+    }
+
 }
 
 fn make_space_station() -> SpaceStation {
