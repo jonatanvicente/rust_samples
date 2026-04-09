@@ -166,8 +166,39 @@ pub fn go() {
     calculate_total_value(&make_space_station());
     //
     refactoring();
+    //
+    dangling_reference();
 }
 
+
+fn dangling_reference () {
+
+    let item_a = CargoItem {
+        name: String::from("ESP32"),
+        category: CargoCategory::Technology,
+        price_per_unit: 3.0
+    };
+    let item_b = CargoItem {
+        name: String::from("Ciclonithe"),
+        category: CargoCategory::Medicine,
+        price_per_unit: 5.0
+    };
+
+    let mut v: Vec<CargoItem> = Vec::new();
+    v.push(item_a);
+    v.push(item_b);
+
+
+    let ship = Ship {
+        name: String::from("Union T962"),
+        capacity: 5,
+        cargo_hold: v
+    };
+
+
+
+
+}
 
 
 fn refactoring() {
@@ -175,10 +206,26 @@ fn refactoring() {
     //double borrow trap
     let space_station = make_space_station();
 
-    let v_ships = space_station.docked_ships;
-    let mut v: Vec<CargoItem> = v_ships.into_iter().flat_map(|ship| ship.cargo_hold).collect();
-    for item in v {  // item is CargoItem (owned) - v is consumed
-        apply_space_wear(item);
+/*
+        for ship in &space_station.docked_ships {      // 1st borrow: &Ship
+            for item in &ship.cargo_hold {             // 2nd borrow: &CargoItem
+               apply_space_wear(item);  // ❌ ERROR: expected CargoItem, found &CargoItem
+            }
+        }
+        Comments: apply_space_wear takes ownership (CargoItem by value), but iterating with & gives you references (&CargoItem).
+            You cannot move a value out of a reference — that would leave the collection with a "hole".
+            This is the trap: you're doubly nested into borrowed territory, so you can never escape to get an owned value.
+            Even trying apply_space_wear(*item) fails, because you cannot move out of a borrowed reference.
+*/
+
+    // SOLUTION:
+    let v_ships = space_station.docked_ships;//moves Vec<Ship> out - no borrow
+    let mut v: Vec<CargoItem> = v_ships
+        .into_iter()//consumes the collection instead of borrowing it. Every item is owned, not borrowed
+        .flat_map(|ship| ship.cargo_hold).collect(); //consumes each Ship, yielding owned CargoItem values
+
+    for item in v {  // item is a fully owned CargoItem
+        apply_space_wear(item); //Ownership transferred
     }
 
 }

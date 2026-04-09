@@ -70,5 +70,6 @@ This is where most beginners hit a wall with the borrow checker.
 #### Phase 4: Refactoring for Safety
 
 Once you have the logic, try to break it to see what the compiler says:
-    - The "Double Borrow" Trap: Try to write a loop that iterates over a ship's cargo (&ship.cargo_hold) and, inside that loop, tries to call apply_space_wear on the same item.
-    - The "Dangling Reference" Trap: Try to write a function that searches for the most expensive item in a ship and returns a reference to it. Then, try to clear the ship's cargo and see if you can still use that reference.
+    - **The "Double Borrow" Trap**: Try to write a loop that iterates over a ship's cargo (&ship.cargo_hold) and, inside that loop, tries to call apply_space_wear on the same item.
+    - **The "Dangling Reference" Trap**: Try to write a function that searches for the most expensive item in a ship and returns a reference to it. 
+        - Then, try to clear the ship's cargo and see if you can still use that reference.
