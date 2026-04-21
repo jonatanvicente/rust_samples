@@ -173,6 +173,9 @@
 * **patterns**.
     - Object Oriented Programming (OOP). Inheritance and polymorphism
     - Callback pattern
+* **pointers**.
+	- Comparison between pointer types: &T, &mut T, Box<T>, Rc<T>, Arc<T>, *const T
+    - Use cases for each pointer type and exercises
 * **profiles**. Uso de profiles disponibles en Cargo.
 * **project_1**
 	- Invocación a println
